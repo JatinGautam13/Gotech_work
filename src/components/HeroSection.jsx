@@ -11,23 +11,23 @@ const HeroSection = () => {
     >
       {/* Navigation Bar */}
       <motion.nav
-        className="w-full text-white max-w-7xl mx-auto flex justify-between items-center py-6"
+        className="w-full text-white max-w-7xl mx-auto flex justify-between items-center py-6 px-4 sm:px-6 lg:px-8"
         initial={{ y: -50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        <div className="flex items-center space-x-8">
+        <div className="flex items-center space-x-4 sm:space-x-8">
           <span className="text-lg font-semibold">Gotech</span>
-          <ul className="flex space-x-6">
+          <ul className="hidden sm:flex space-x-4 sm:space-x-6">
             {["Does", "Templates", "Guide", "Blog", "Pricing"].map((item, index) => (
-              <li key={index} className="text-gray-400 hover:text-black cursor-pointer">
+              <li key={index} className="text-gray-400 hover:text-white cursor-pointer">
                 {item}
               </li>
             ))}
           </ul>
         </div>
         <div className="flex items-center space-x-4">
-          <button className="text-gray-400 hover:text-black">Sign in</button>
+          <button className="text-gray-400 hover:text-white">Sign in</button>
           <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800">
             Book a demo
           </button>
@@ -36,7 +36,7 @@ const HeroSection = () => {
 
       {/* Main Hero Content */}
       <motion.div
-        className="mt-16"
+        className="mt-16 px-4 sm:px-6 lg:px-8"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.4, duration: 0.8 }}
@@ -49,18 +49,18 @@ const HeroSection = () => {
         >
           New - Try our Notion Integration
         </motion.div>
-        <h1 className="text-6xl font-bold mb-6">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
           Design system infrastructure for modern teams
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+        <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-8">
           With Specify's versatility, product teams release better experiences faster while staying
           in-line with their company standards.
         </p>
-        <div className="space-x-4">
+        <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
           <button className="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800">
             Book a demo
           </button>
-          <button className="bg-transparent text-gray-300 px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-800 ">
+          <button className="bg-transparent text-gray-300 px-6 py-3 rounded-lg border border-gray-300 hover:bg-gray-800">
             Read our vision
           </button>
         </div>
@@ -68,18 +68,18 @@ const HeroSection = () => {
 
       {/* Trusted By Section */}
       <motion.div
-        className="mt-24"
+        className="mt-24 px-4 sm:px-6 lg:px-8"
         initial={{ y: 50, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.8 }}
       >
-        <p className="text-gray-600 mb-6">Already loved and trusted by product teams</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-6">
+        <p className="text-gray-400 mb-6">Already loved and trusted by product teams</p>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
           {["Pitch", "Dashlane", "Medium", "Star Atlas", "Census", "Ruter#", "Comcast"].map(
             (company, index) => (
               <motion.div
                 key={index}
-                className="text-gray-700 font-semibold underline"
+                className="text-gray-400 font-semibold underline"
                 whileHover={{ scale: 1.1 }}
               >
                 {company}
